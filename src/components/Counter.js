@@ -56,7 +56,7 @@ export default function Counter() {
     
   };
   const decrement = () => {
-    /* STEP 5 */
+    setCount(count -1);
   };
   const reset = () => {
     /* STEP 6 */
@@ -76,7 +76,7 @@ export default function Counter() {
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
-        <button id='decrement' onClick={decrement}>Decrement</button>
+        <button disabled={count <= 0} id='decrement' onClick={decrement}>Decrement</button>
         <button id='resetCount' onClick={reset}>Reset</button>
       </div>
     </div>
